@@ -1,0 +1,17 @@
+name: wakawa-sniper
+
+builder:
+  buildpacks:
+    - heroku/python
+
+env:
+  PYTHON_VERSION: "3.10.15"
+
+services:
+  - name: bot
+    type: worker
+    routes:
+      - path: /
+    instance_type: free
+    env:
+      BOT_TOKEN: ${7925732957:AAFZ29BsZaTUFaDwsOTnD3-D0M7bxMM40Vo}
